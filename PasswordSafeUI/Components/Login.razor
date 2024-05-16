@@ -1,0 +1,23 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+
+<h3>Login</h3>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <p style="color:red;">@ErrorMessage</p>
+}
+
+<EditForm Model="@loginModel" OnValidSubmit="@(async () => await HandleLogin())" FormName="LoginForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div>
+        <label>Username: </label>
+        <InputText id="username" @bind-Value="loginModel.Username" />
+    </div>
+    <div>
+        <label>Password: </label>
+        <InputText type="password" id="password" @bind-Value="loginModel.Password" />
+    </div>
+    <button type="submit">Login</button>
+</EditForm>

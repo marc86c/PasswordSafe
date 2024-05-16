@@ -1,0 +1,23 @@
+﻿@page "/register"
+@rendermode InteractiveServer
+
+<h3>Register</h3>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <p style="color:red;">@ErrorMessage</p>
+}
+
+<EditForm Model="@registerModel" OnValidSubmit="@( async () => await HandleRegister())" FormName="RegisterForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div>
+        <label>Username: </label>
+        <InputText id="username" @bind-Value="registerModel.Username" />
+    </div>
+    <div>
+        <label>Password: </label>
+        <InputText type="password" id="password" @bind-Value="registerModel.Password" />
+    </div>
+    <button type="submit">Register</button>
+</EditForm>
