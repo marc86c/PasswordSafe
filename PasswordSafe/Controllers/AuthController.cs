@@ -9,9 +9,11 @@ namespace PasswordSafe.Controllers
     public class AuthController : ControllerBase
     {
         private IAuthService AuthService { get; set; }
-        public AuthController(IAuthService authService) 
+        private IUserService UserService { get; set; }
+        public AuthController(IAuthService authService, IUserService userService) 
         {
             AuthService = authService;
+            UserService = userService;
         }
 
         [HttpPost("Register", Name = "Register")]
@@ -21,9 +23,15 @@ namespace PasswordSafe.Controllers
         }
 
         [HttpPost("Login", Name = "Login")]
-        public ActionResult<bool> Login(LoginModel loginModel)
+        public ActionResult<User> Login(LoginModel loginModel)
         {
-            return Ok(AuthService.Login(loginModel.Username, loginModel.Password));
+            var isSucessful = AuthService.Login(loginModel.Username, loginModel.Password);
+            if (!isSucessful)
+            {
+                return BadRequest();            
+            }
+
+            return Ok(UserService.GetUserData(loginModel.Username));
         }
     }
 }

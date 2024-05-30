@@ -8,7 +8,8 @@ namespace PasswordSafeCommon.Model
 {
     public class AuthenticationData
     {
-        public string Name;
-        public string Password;
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Provider { get; set; }
     }
 }

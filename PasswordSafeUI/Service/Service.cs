@@ -7,25 +7,25 @@ namespace PasswordSafeUI.Service
     public class Service : IService
     {
         public HttpClient HttpClient;
-        public Service(HttpClient httpClient) 
-        { 
+        public Service(HttpClient httpClient)
+        {
             HttpClient = httpClient;
             HttpClient.BaseAddress = new Uri("https://localhost:7222/");
         }
 
-        public async Task<bool> Login(string user, string password)
+        public async Task<User> Login(string user, string password)
         {
-            var loginModel = new LoginModel { Username = user, Password = password};
+            var loginModel = new LoginModel { Username = user, Password = password };
             var response = await HttpClient.PostAsJsonAsync("api/Auth/Login", loginModel);
 
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadFromJsonAsync<bool>();
+                var result = await response.Content.ReadFromJsonAsync<User>();
                 return result;
             }
 
             // Handle error response
-            return false;
+            return null;
         }
 
         public async Task<bool> Register(string user, string password)
@@ -46,7 +46,7 @@ namespace PasswordSafeUI.Service
         public async Task<User> GetUserData(string username)
         {
             var response = await HttpClient.GetAsync($"api/User/User/{username}");
-          
+
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadFromJsonAsync<User>();
@@ -54,5 +54,12 @@ namespace PasswordSafeUI.Service
             }
             throw new Exception("not found");
         }
+
+        public async Task AddData(string username, AuthenticationData data)
+        {
+            var response = await HttpClient.PostAsJsonAsync<AuthenticationData>("ap/User/Data", data);
+
+        }
+
     }
 }

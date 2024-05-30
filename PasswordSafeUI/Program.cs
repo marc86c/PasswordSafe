@@ -1,5 +1,6 @@
 using Microsoft.FluentUI.AspNetCore.Components;
 using PasswordSafeUI.Components;
+using PasswordSafeUI.Components.Common;
 using PasswordSafeUI.Service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddFluentUIComponents();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IService, Service>();
+builder.Services.AddSingleton<UserState>();
 
 var app = builder.Build();
 

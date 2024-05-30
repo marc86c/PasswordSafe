@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using PasswordSafeCommon.Model;
+using PasswordSafeUI.Components.Common;
 using PasswordSafeUI.Service;
 
 namespace PasswordSafeUI.Components
@@ -12,22 +13,29 @@ namespace PasswordSafeUI.Components
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
+        [Inject]
+        public UserState UserState { get; set; }
+
         private LoginModel loginModel = new LoginModel();
         private string ErrorMessage;
 
         private async Task HandleLogin()
         {
-            var result = await Service.Login(loginModel.Username, loginModel.Password);
-            if (!result)
+            User result;
+            try
             {
-                ErrorMessage = "Invalid username or password.";
+                result = await Service.Login(loginModel.Username, loginModel.Password);
             }
-            else
+            catch (Exception ex)
             {
-                ErrorMessage = string.Empty;
-                NavigationManager.NavigateTo($"Home/{loginModel.Username}");
-                // Redirect to home or other page
+                ErrorMessage = "Falsches Passwort";
+                return;
             }
+
+            ErrorMessage = string.Empty;
+            UserState.CurrentUser = result;
+            NavigationManager.NavigateTo($"Home/{loginModel.Username}");
+
         }
     }
 }

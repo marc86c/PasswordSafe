@@ -15,9 +15,17 @@ namespace PasswordSafe.Controllers
         }
 
         [HttpGet("User/{username}", Name = "User")]
-        public ActionResult<User> Register(string username)
+        public ActionResult<User> GetUserData(string username)
         {
             return Ok(UserService.GetUserData(username));
+        }
+
+
+        [HttpGet("User/{username}/Data", Name = "name")]
+        public ActionResult<User> AddData(string username, AuthenticationData data)
+        {
+            UserService.CreateAuthenticationData(username, data);
+            return Ok();
         }
     }
 }

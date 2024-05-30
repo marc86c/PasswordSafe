@@ -1,7 +1,21 @@
 ﻿@page "/"
+@inject NavigationManager nav
+@rendermode InteractiveServer
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>PasswordSafe</h1>
+<button @onclick=ToLogin>Login</button>
+<button @onclick=ToRegister>Registrieren</button>
 
-Welcome to your new Fluent Blazor app.
+@code {
+    public void ToLogin()
+    {
+        nav.NavigateTo("/login");
+    }
+
+    public void ToRegister()
+    {
+        nav.NavigateTo("register");   
+    }
+}

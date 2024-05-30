@@ -1,0 +1,43 @@
+﻿@page "/home/{Username}"
+@rendermode InteractiveServer
+
+@if (user != null)
+{
+    if (newData != null)
+    {
+        <EditForm Model="@newData" OnValidSubmit="@(async () => await Save())" FormName="NewDataForm">
+            <div>
+                <input placeholder="Provider" @bind-value=newData.Provider />
+                <input placeholder="username" @bind-value=newData.Username />
+                <input placeholder="password" @bind-value=newData.Password />
+                <button type="submit">Speichern</button>
+            </div>
+        </EditForm>
+    }
+    <button @onclick=@Add>Add +</button>
+    <div>
+        <h4>Daten</h4>
+        @foreach (var data in user.AuthenticationDatas)
+        {
+            <div style="border: 1px solid black; display: inline-flex" >
+                <div>
+                    <h5>Provider</h5>
+                    <p>@data.Provider</p>
+                </div>
+                <div>
+                    <h5>Password</h5>
+                    <p>@data.Password</p>
+                </div>
+                <div>
+                    <h5>Username</h5>
+                    <p>@data.Username</p>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>loading...</p>
+}
+

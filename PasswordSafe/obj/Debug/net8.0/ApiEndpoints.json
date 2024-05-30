@@ -15,7 +15,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Boolean",
+        "Type": "PasswordSafeCommon.Model.User",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -53,7 +53,7 @@
   },
   {
     "ContainingType": "PasswordSafe.Controllers.UserController",
-    "Method": "Register",
+    "Method": "GetUserData",
     "RelativePath": "api/User/User/{username}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -62,6 +62,37 @@
       {
         "Name": "username",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PasswordSafeCommon.Model.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PasswordSafe.Controllers.UserController",
+    "Method": "AddData",
+    "RelativePath": "api/User/User/{username}/Data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "data",
+        "Type": "PasswordSafeCommon.Model.AuthenticationData",
         "IsRequired": true
       }
     ],
