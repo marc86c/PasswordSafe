@@ -23,6 +23,7 @@ namespace PasswordSafeUI.Components
         public User user { get; set; }
         public bool isAdding = false;
         public AuthenticationData newData;
+        public int? openPasswordIndex = null;
         protected override async Task OnInitializedAsync()
         {
             try
@@ -60,6 +61,23 @@ namespace PasswordSafeUI.Components
         {
             UserState.CurrentUser = null;
             NavigationManager.NavigateTo("/");
+        }
+
+        public void OpenPassword(int? index)
+        {
+            if (index.HasValue)
+            {
+                openPasswordIndex = index;
+            }
+            else
+            {
+                ClosePassword();
+            }
+        }
+
+        public void ClosePassword()
+        {
+            openPasswordIndex = null;
         }
     }
 }

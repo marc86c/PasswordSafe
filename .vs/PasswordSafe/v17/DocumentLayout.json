@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafeui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|solutionrelative:passwordsafeui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafeui\\components\\userpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|solutionrelative:passwordsafeui\\components\\userpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafeui\\components\\userpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|solutionrelative:passwordsafeui\\components\\userpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafeui\\components\\userpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|solutionrelative:passwordsafeui\\components\\userpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0A416795-2C3E-4E64-8BCD-654EC1FA5ADC}|PasswordSafeCommon\\PasswordSafeCommon.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafecommon\\model\\authenticationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A416795-2C3E-4E64-8BCD-654EC1FA5ADC}|PasswordSafeCommon\\PasswordSafeCommon.csproj|solutionrelative:passwordsafecommon\\model\\authenticationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafeui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|solutionrelative:passwordsafeui\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{76389F86-879B-4F32-AC54-4BE21754789E}|PasswordSafeUI\\PasswordSafeUI.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafeui\\service\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{34B5364E-C578-4038-9EC8-810CE223FCAD}|PasswordSafe\\PasswordSafe.csproj|solutionrelative:passwordsafe\\service\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A416795-2C3E-4E64-8BCD-654EC1FA5ADC}|PasswordSafeCommon\\PasswordSafeCommon.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafecommon\\model\\authenticationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A416795-2C3E-4E64-8BCD-654EC1FA5ADC}|PasswordSafeCommon\\PasswordSafeCommon.csproj|solutionrelative:passwordsafecommon\\model\\authenticationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34B5364E-C578-4038-9EC8-810CE223FCAD}|PasswordSafe\\PasswordSafe.csproj|c:\\users\\marc\\dropbox\\pc\\documents\\berufsschule\\3. lehrjahr\\modul security\\passwordsafe\\passwordsafe\\data\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{34B5364E-C578-4038-9EC8-810CE223FCAD}|PasswordSafe\\PasswordSafe.csproj|solutionrelative:passwordsafe\\data\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -134,21 +134,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IService.cs",
-              "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Service\\IService.cs",
-              "RelativeDocumentMoniker": "PasswordSafeUI\\Service\\IService.cs",
-              "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Service\\IService.cs",
-              "RelativeToolTip": "PasswordSafeUI\\Service\\IService.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAEwAoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T12:24:25.184Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -157,27 +144,27 @@
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\UserPage.razor.cs",
               "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\UserPage.razor.cs",
               "RelativeToolTip": "PasswordSafeUI\\Components\\UserPage.razor.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwD0AAAArAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAhwEcAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T13:55:26.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserPage.razor",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\UserPage.razor",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\UserPage.razor",
               "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\UserPage.razor",
               "RelativeToolTip": "PasswordSafeUI\\Components\\UserPage.razor",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAQwBAAAAAZAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwCgAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-30T12:04:24.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\Layout\\MainLayout.razor",
@@ -190,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "App.razor",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\App.razor",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\App.razor",
@@ -203,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Home.razor",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\Pages\\Home.razor",
@@ -216,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "PasswordSafe\\Controllers\\UserController.cs",
@@ -229,20 +216,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "PasswordSafeUI\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAByAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-30T12:49:18.078Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "AuthenticationData.cs",
+              "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\Model\\AuthenticationData.cs",
+              "RelativeDocumentMoniker": "PasswordSafeCommon\\Model\\AuthenticationData.cs",
+              "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\Model\\AuthenticationData.cs",
+              "RelativeToolTip": "PasswordSafeCommon\\Model\\AuthenticationData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T12:08:51.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IService.cs",
+              "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Service\\IService.cs",
+              "RelativeDocumentMoniker": "PasswordSafeUI\\Service\\IService.cs",
+              "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Service\\IService.cs",
+              "RelativeToolTip": "PasswordSafeUI\\Service\\IService.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAEwAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T12:24:25.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Service\\Service.cs",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Service\\Service.cs",
@@ -255,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\Service\\IUserService.cs",
               "RelativeDocumentMoniker": "PasswordSafe\\Service\\IUserService.cs",
@@ -268,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\Model\\User.cs",
               "RelativeDocumentMoniker": "PasswordSafeCommon\\Model\\User.cs",
@@ -281,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Login.razor.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Login.razor.cs",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\Login.razor.cs",
@@ -294,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UserState.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Common\\UserState.cs",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\Common\\UserState.cs",
@@ -307,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Login.razor",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Components\\Login.razor",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Components\\Login.razor",
@@ -320,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\appsettings.json",
               "RelativeDocumentMoniker": "PasswordSafeUI\\appsettings.json",
@@ -333,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeUI\\Program.cs",
               "RelativeDocumentMoniker": "PasswordSafeUI\\Program.cs",
@@ -346,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\Service\\AuthService.cs",
               "RelativeDocumentMoniker": "PasswordSafe\\Service\\AuthService.cs",
@@ -359,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "PasswordSafe\\Controllers\\AuthController.cs",
@@ -372,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\Service\\IAuthService.cs",
               "RelativeDocumentMoniker": "PasswordSafe\\Service\\IAuthService.cs",
@@ -381,19 +394,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T12:27:00.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AuthenticationData.cs",
-              "DocumentMoniker": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\Model\\AuthenticationData.cs",
-              "RelativeDocumentMoniker": "PasswordSafeCommon\\Model\\AuthenticationData.cs",
-              "ToolTip": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\Model\\AuthenticationData.cs",
-              "RelativeToolTip": "PasswordSafeCommon\\Model\\AuthenticationData.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAADgvwwAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T12:08:51.148Z",
               "EditorCaption": ""
             },
             {
