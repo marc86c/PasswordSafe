@@ -19,6 +19,15 @@ namespace PasswordSafe.Service
             _userStore.SaveChanges();
         }
 
+
+        public void UpdateUser(User user)
+        {
+            var currentUser = _userStore.Users.First(x => x.Username == user.Username);
+            _userStore.Users.RemoveAt(_userStore.Users.IndexOf(currentUser));
+            _userStore.Users.Add(user);
+            _userStore.SaveChanges();
+        }
+
         public User GetUserData(string username)
         {
             return _userStore.Users.First(x => x.Username == username);

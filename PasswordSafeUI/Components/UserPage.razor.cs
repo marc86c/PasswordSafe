@@ -79,5 +79,12 @@ namespace PasswordSafeUI.Components
         {
             openPasswordIndex = null;
         }
+
+        public async Task DeleteData(int index)
+        { 
+            user.AuthenticationDatas.RemoveAt(index);
+            Service.UpdateUser(user);
+        }
+
     }
 }

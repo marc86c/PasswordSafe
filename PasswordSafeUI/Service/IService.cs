@@ -9,5 +9,6 @@ namespace PasswordSafeUI.Service
 
         public Task<User> GetUserData(string username);
         public Task AddData(string username, AuthenticationData data);
+        public Task UpdateUser(User user);
     }
 }

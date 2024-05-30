@@ -3,6 +3,7 @@
 
 @if (user != null)
 {
+    <h1>Guten Tag @user.Username</h1>
     if (newData != null)
     {
         <EditForm Model="@newData" OnValidSubmit="@(async () => await Save())" FormName="NewDataForm">
@@ -41,6 +42,9 @@
                         <input readonly placeholder="*****"/>
                         <button @onclick="@(() => OpenPassword(user.AuthenticationDatas.IndexOf(data)))">öffnen</button>
                     }
+                </div>
+                <div style="display: inline-flex; justify-content: space-between;">
+                    <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(data)))">X</button>
                 </div>
             </div>
         }

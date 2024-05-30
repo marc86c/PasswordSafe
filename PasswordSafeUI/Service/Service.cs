@@ -61,5 +61,10 @@ namespace PasswordSafeUI.Service
 
         }
 
+        public async Task UpdateUser(User user)
+        {
+            var response = await HttpClient.PutAsJsonAsync<User>($"api/User/User/Data", user);
+        }
+
     }
 }

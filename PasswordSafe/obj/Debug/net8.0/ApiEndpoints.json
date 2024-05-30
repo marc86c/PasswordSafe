@@ -53,15 +53,20 @@
   },
   {
     "ContainingType": "PasswordSafe.Controllers.UserController",
-    "Method": "GetUserData",
-    "RelativePath": "api/User/User/{username}",
-    "HttpMethod": "GET",
+    "Method": "AddData",
+    "RelativePath": "api/User/User/{username}/Data",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "username",
         "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "data",
+        "Type": "PasswordSafeCommon.Model.AuthenticationData",
         "IsRequired": true
       }
     ],
@@ -79,20 +84,15 @@
   },
   {
     "ContainingType": "PasswordSafe.Controllers.UserController",
-    "Method": "AddData",
-    "RelativePath": "api/User/User/{username}/Data",
-    "HttpMethod": "POST",
+    "Method": "UpdateUserData",
+    "RelativePath": "api/User/User/Data",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "username",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "data",
-        "Type": "PasswordSafeCommon.Model.AuthenticationData",
+        "Name": "user",
+        "Type": "PasswordSafeCommon.Model.User",
         "IsRequired": true
       }
     ],

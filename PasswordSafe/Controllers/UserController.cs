@@ -14,10 +14,11 @@ namespace PasswordSafe.Controllers
             UserService = userService;
         }
 
-        [HttpGet("User/{username}", Name = "User")]
-        public ActionResult<User> GetUserData(string username)
+        [HttpPut("User/Data", Name = "User")]
+        public ActionResult<User> UpdateUserData(User user)
         {
-            return Ok(UserService.GetUserData(username));
+            UserService.UpdateUser(user);
+            return Ok();
         }
 
 
