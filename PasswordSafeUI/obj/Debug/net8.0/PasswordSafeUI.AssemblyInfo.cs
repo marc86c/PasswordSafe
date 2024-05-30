@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PasswordSafeUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c05d303240a462d762b1c8e84cc9968623d7c697")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cf3c75793314fe82585c027bc544bfe19ff86be")]
 [assembly: System.Reflection.AssemblyProductAttribute("PasswordSafeUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PasswordSafeUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

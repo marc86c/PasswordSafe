@@ -55,5 +55,11 @@ namespace PasswordSafeUI.Components
 
             StateHasChanged();
         }
+
+        public void Logout()
+        {
+            UserState.CurrentUser = null;
+            NavigationManager.NavigateTo("/");
+        }
     }
 }
