@@ -57,7 +57,7 @@ namespace PasswordSafeUI.Service
 
         public async Task AddData(string username, AuthenticationData data)
         {
-            var response = await HttpClient.PostAsJsonAsync<AuthenticationData>("ap/User/Data", data);
+            var response = await HttpClient.PostAsJsonAsync<AuthenticationData>($"api/User/User/{username}/Data", data);
 
         }
 

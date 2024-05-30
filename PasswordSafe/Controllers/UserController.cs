@@ -21,7 +21,7 @@ namespace PasswordSafe.Controllers
         }
 
 
-        [HttpGet("User/{username}/Data", Name = "name")]
+        [HttpPost("User/{username}/Data", Name = "name")]
         public ActionResult<User> AddData(string username, AuthenticationData data)
         {
             UserService.CreateAuthenticationData(username, data);

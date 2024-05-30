@@ -81,7 +81,7 @@
     "ContainingType": "PasswordSafe.Controllers.UserController",
     "Method": "AddData",
     "RelativePath": "api/User/User/{username}/Data",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
