@@ -19,11 +19,17 @@ namespace PasswordSafeUI.Components
         [Parameter]
         public string Username { get; set; }
 
+        public List<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
+            user.AuthenticationDatas.Where(x => x.Username.Contains(filterCriteria)).ToList() 
+                .Concat(user.AuthenticationDatas.Where(x => x.Provider.Contains(filterCriteria))).ToList() : 
+            user.AuthenticationDatas;
 
         public User user { get; set; }
         public bool isAdding = false;
         public AuthenticationData newData;
         public int? openPasswordIndex = null;
+        public string filterCriteria;
+
         protected override async Task OnInitializedAsync()
         {
             try

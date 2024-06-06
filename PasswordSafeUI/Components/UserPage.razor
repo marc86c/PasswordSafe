@@ -19,7 +19,10 @@
     <button @onclick=@Logout>Logout</button>
     <div>
         <h4>Daten</h4>
-        @foreach (var data in user.AuthenticationDatas)
+        <div>
+            <FluentSearch Placeholder="Suchen"  Value="@filterCriteria" ValueChanged="@((value) => {filterCriteria = value; StateHasChanged(); })"></FluentSearch>
+        </div>
+        @foreach (var data in AuthenticationDatas)
         {
             <div style="border: 1px solid black; display: inline-flex; justify-content: space-between; width: 70%" >
                 <div style="display: inline-flex; justify-content: space-between;">
