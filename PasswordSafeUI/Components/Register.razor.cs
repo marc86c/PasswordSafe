@@ -19,15 +19,20 @@ namespace PasswordSafeUI.Components
             var result = await Service.Register(registerModel.Username, registerModel.Password);
             if (!result)
             {
-                ErrorMessage = "Username already exists.";
+                ErrorMessage = "Registrieren ist fehlgeschlagen";
+                return; 
             }
             else
             {
                 ErrorMessage = string.Empty;
 
                 NavigationManager.NavigateTo($"Home/{registerModel.Username}");
-                // Redirect to login or other page
             }
+        }
+
+        public void Login()
+        {
+            NavigationManager.NavigateTo("/login");
         }
     }
 }

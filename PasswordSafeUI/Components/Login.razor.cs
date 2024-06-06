@@ -32,10 +32,21 @@ namespace PasswordSafeUI.Components
                 return;
             }
 
+            if (result == null)
+            {
+                ErrorMessage = "Falsches Passwort";
+                return;
+            }
+
             ErrorMessage = string.Empty;
             UserState.CurrentUser = result;
             NavigationManager.NavigateTo($"Home/{loginModel.Username}");
 
+        }
+
+        public void Register()
+        {
+            NavigationManager.NavigateTo($"/register");
         }
     }
 }
