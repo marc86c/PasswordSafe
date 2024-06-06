@@ -19,6 +19,14 @@ namespace PasswordSafeUI.Components
         private LoginModel loginModel = new LoginModel();
         private string ErrorMessage;
 
+        protected async override Task OnInitializedAsync()
+        {
+            if (UserState.CurrentUser != null)
+            {
+                NavigationManager.NavigateTo($"/Home/{UserState.CurrentUser.Username}", true);
+            }
+        }
+
         private async Task HandleLogin()
         {
             User result;

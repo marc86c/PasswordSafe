@@ -1,60 +1,63 @@
 ﻿@page "/home/{Username}"
 @rendermode InteractiveServer
 
-@if (user != null)
-{
-    <h1>Guten Tag @user.Username</h1>
-    if (newData != null)
+<div style="display: flex; justify-content: center; align-items: center; width: 100%; flex-direction: column;">
+    @if (user != null)
     {
-        <EditForm Model="@newData" OnValidSubmit="@(async () => await Save())" FormName="NewDataForm">
-            <div>
-                <input placeholder="Provider" @bind-value=newData.Provider />
-                <input placeholder="username" @bind-value=newData.Username />
-                <input placeholder="password" type="password" @bind-value=newData.Password />
-                <button type="submit">Speichern</button>
-            </div>
-        </EditForm>
-    }
-    <button @onclick=@Add>Add +</button>
-    <button @onclick=@Logout>Logout</button>
-    <div>
-        <h4>Daten</h4>
-        <div>
-            <FluentSearch Placeholder="Suchen"  Value="@filterCriteria" ValueChanged="@((value) => {filterCriteria = value; StateHasChanged(); })"></FluentSearch>
-        </div>
-        @foreach (var data in AuthenticationDatas)
+        <h1>Guten Tag @user.Username</h1>
+        if (newData != null)
         {
-            <div style="border: 1px solid black; display: inline-flex; justify-content: space-between; width: 70%" >
-                <div style="display: inline-flex; justify-content: space-between;">
-                    <h5>Provider</h5>
-                    <input readonly @bind-value="@data.Provider"></input>
+            <EditForm Model="@newData" OnValidSubmit="@(async () => await Save())" FormName="NewDataForm">
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <input placeholder="Provider" @bind-value="newData.Provider" />
+                    <input placeholder="username" @bind-value="newData.Username" />
+                    <input placeholder="password" type="password" @bind-value="newData.Password" />
+                    <button type="submit">Speichern</button>
                 </div>
-                <div style="display: inline-flex; justify-content: space-between;">
-                    <h5>Username</h5>
-                    <input readonly @bind-value="@data.Username"></input>
-                </div>
-                <div style="display: inline-flex; justify-content: space-between;">
-                    <h5>Password</h5>
-                    @if(openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(data))
-                    {
-                        <input readonly @bind-value="@data.Password"></input>
-                        <button @onclick="@( () => OpenPassword(null))">schliessen</button>
-                    }
-                    else
-                    {
-                        <input readonly placeholder="*****"/>
-                        <button @onclick="@(() => OpenPassword(user.AuthenticationDatas.IndexOf(data)))">öffnen</button>
-                    }
-                </div>
-                <div style="display: inline-flex; justify-content: space-between;">
-                    <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(data)))">X</button>
-                </div>
-            </div>
+            </EditForm>
         }
-    </div>
-}
-else
-{
-    <p>loading...</p>
-}
-
+        <div style="display: flex; gap: 10px;">
+            <button @onclick="@Add">Add +</button>
+            <button @onclick="@Logout">Logout</button>
+        </div>
+        <div style="margin-top: 20px; width: 100%; text-align: center;">
+            <h4>Daten</h4>
+            <div style="margin-bottom: 20px;">
+                <FluentSearch Placeholder="Suchen" Value="@filterCriteria" ValueChanged="@((value) => { filterCriteria = value; StateHasChanged(); })"></FluentSearch>
+            </div>
+            @foreach (var data in AuthenticationDatas)
+            {
+                <div style="border: 1px solid black; display: flex; justify-content: space-between; width: 70%; margin: 10px auto; padding: 10px;">
+                    <div style="flex: 1; text-align: center;">
+                        <h5>Provider</h5>
+                        <input readonly @bind-value="@data.Provider"></input>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <h5>Username</h5>
+                        <input readonly @bind-value="@data.Username"></input>
+                    </div>
+                    <div style="flex: 1; text-align: center;">
+                        <h5>Password</h5>
+                        @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(data))
+                        {
+                            <input readonly @bind-value="@data.Password"></input>
+                            <button @onclick="@( () => OpenPassword(null))">schliessen</button>
+                        }
+                        else
+                        {
+                            <input readonly placeholder="*****" />
+                            <button @onclick="@(() => OpenPassword(user.AuthenticationDatas.IndexOf(data)))">öffnen</button>
+                        }
+                    </div>
+                    <div style="flex: 0; text-align: center;">
+                        <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(data)))">X</button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>loading...</p>
+    }
+</div>

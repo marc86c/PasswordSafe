@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using PasswordSafeCommon.Model;
+using PasswordSafeUI.Components.Common;
 using PasswordSafeUI.Service;
 
 namespace PasswordSafeUI.Components
@@ -11,8 +12,19 @@ namespace PasswordSafeUI.Components
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
+        [Inject]
+        public UserState UserState { get; set; }
+
         private RegisterModel registerModel = new RegisterModel();
         private string ErrorMessage;
+
+        protected async override Task OnInitializedAsync()
+        {
+            if (UserState.CurrentUser != null)
+            {
+                NavigationManager.NavigateTo($"/Home/{UserState.CurrentUser.Username}", true);
+            }
+        }
 
         private async Task HandleRegister()
         {
