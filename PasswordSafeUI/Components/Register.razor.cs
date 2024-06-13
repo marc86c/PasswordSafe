@@ -28,6 +28,14 @@ namespace PasswordSafeUI.Components
 
         private async Task HandleRegister()
         {
+            var errorMessage = ValidatePasswordComplexity(registerModel.Password);
+            if(errorMessage != string.Empty)
+            {
+                this.ErrorMessage = errorMessage;
+                return;
+            }
+
+
             var result = await Service.Register(registerModel.Username, registerModel.Password);
             if (!result)
             {
@@ -45,6 +53,27 @@ namespace PasswordSafeUI.Components
         public void Login()
         {
             NavigationManager.NavigateTo("/login");
+        }
+
+        public string ValidatePasswordComplexity(string passwd)
+        {
+            if (passwd.Length < 8 )
+                return "Das Passwort muss mindestens 8 Zeichen lang sein";
+            if (!passwd.Any(char.IsUpper))
+                return "Das Passwort muss ein Grossbuchstaben enthalten";
+            if (!passwd.Any(char.IsLower))
+                return "Das Passwort muss ein Kleinbuchstaben enthalten";
+            if (passwd.Contains(" "))
+                return "Leerzeichen sind nicht erlaubt";
+            string specialCh = @"%!@#$%^&*()?/>.<,:;'\|}]{[_~`+=-" + "\"";
+            char[] specialChArr = specialCh.ToCharArray();
+            foreach (char ch in specialChArr)
+            {
+                if (passwd.Contains(ch))
+                    return "Keine Spezialzeichen erlaubt";
+            }
+
+            return string.Empty;
         }
     }
 }
