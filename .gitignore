@@ -398,3 +398,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/PasswordSafeCommon/obj/Debug/net8.0/apphost.exe
+/PasswordSafe/obj/Debug/net8.0/apphost.exe
+/PasswordSafe/obj/Debug/net8.0/PasswordSafe.AssemblyInfo.cs
+/PasswordSafe/obj/Debug/net8.0/PasswordSafe.AssemblyInfoInputs.cache
+/PasswordSafe/obj/Debug/net8.0/PasswordSafe.csproj.AssemblyReference.cache
+/PasswordSafeCommon/obj/Debug/net8.0/PasswordSafeCommon.AssemblyInfo.cs
+/PasswordSafeCommon/obj/Debug/net8.0/PasswordSafeCommon.AssemblyInfoInputs.cache
