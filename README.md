@@ -52,6 +52,7 @@ Unser Repo besteht aus 3 Projekten, PasswordSafeUI, dies ist unser Frontend. Das
 
 ### Registrierung:
 Bei der Registrierung wird zuerst die Komplexität des Passwortes überprüft:
+```
    if (passwd.Length < 8 )
        return "Das Passwort muss mindestens 8 Zeichen lang sein";
    if (!passwd.Any(char.IsUpper))
@@ -67,6 +68,7 @@ Bei der Registrierung wird zuerst die Komplexität des Passwortes überprüft:
        if (passwd.Contains(ch))
            return "Keine Spezialzeichen erlaubt";
    }
+```
 
  Danach wird eine Request an die API geschickt, das Passwort zusammen mit dem Salt gehashed und im JSON-File gespeichert.
 
