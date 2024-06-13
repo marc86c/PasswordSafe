@@ -405,3 +405,7 @@ FodyWeavers.xsd
 /PasswordSafe/obj/Debug/net8.0/PasswordSafe.csproj.AssemblyReference.cache
 /PasswordSafeCommon/obj/Debug/net8.0/PasswordSafeCommon.AssemblyInfo.cs
 /PasswordSafeCommon/obj/Debug/net8.0/PasswordSafeCommon.AssemblyInfoInputs.cache
+/PasswordSafe/obj/Debug/net8.0/ref/PasswordSafe.dll
+/PasswordSafe/obj/Debug/net8.0/refint/PasswordSafe.dll
+/PasswordSafe/obj/Debug/net8.0/PasswordSafe.dll
+/PasswordSafe/obj/Debug/net8.0/PasswordSafe.pdb
