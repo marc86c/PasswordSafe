@@ -1,39 +1,34 @@
 ﻿@page "/login"
 @rendermode InteractiveServer
 
-<div style="display: flex; flex-direction: column;  align-items: center; gap: 10px;">
+<div class="container">
     <div>
-
         <h3>Login</h3>
 
         @if (!string.IsNullOrEmpty(ErrorMessage))
         {
-            <p style="color:red;">@ErrorMessage</p>
+            <p class="error-message">@ErrorMessage</p>
         }
-
     </div>
 
-
-    <EditForm Model="@loginModel" OnValidSubmit="@(async () => await HandleLogin())" FormName="LoginForm" style="display: flex; flex-direction: column;">
+    <EditForm Model="@loginModel" OnValidSubmit="@(async () => await HandleLogin())" FormName="LoginForm" class="login-form">
         <DataAnnotationsValidator />
         <ValidationSummary />
-        <div>
-
-            <div>
-                <label>Username: </label>
-                <InputText id="username" @bind-Value="loginModel.Username" />
-            </div>
-            <div>
-                <label>Password: </label>
-                <InputText type="password" id="password" @bind-Value="loginModel.Password" />
-            </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <InputText id="username" @bind-Value="loginModel.Username" class="input-field" />
         </div>
-        <div style="display: flex; justify-content: center">
-         <button type="submit">Login</button>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <InputText type="password" id="password" @bind-Value="loginModel.Password" class="input-field" />
+        </div>
+        <div class="button-container">
+            <button type="submit" class="submit-button">Login</button>
         </div>
     </EditForm>
 
-    <div style="display: inline-flex; justify-content: left; gap: 5px">
-        <p>Hast du noch kein Konto?</p> <p @onclick="Register" style="text-decoration: underline;">Registrieren</p>
+    <div class="login-prompt">
+        <p>Hast du noch kein Konto?</p>
+        <p @onclick="Register" class="register-link">Registrieren</p>
     </div>
 </div>
