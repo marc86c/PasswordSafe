@@ -1,4 +1,6 @@
-﻿using PasswordSafeCommon.Model;
+﻿using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using PasswordSafeCommon.Model;
 using System.Text.Json;
 
 namespace PasswordSafe.Service
@@ -28,5 +30,7 @@ namespace PasswordSafe.Service
             var json = JsonSerializer.Serialize(Users);
             File.WriteAllText(filePath, json);
         }
+
+
     }
 }
