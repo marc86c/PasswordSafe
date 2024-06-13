@@ -28,6 +28,7 @@ namespace PasswordSafe.Service
 
         public void UpdateUser(User user)
         {
+            user.AuthenticationDatas.ForEach(x => x.Password = Encrypt(x.Password));
             var currentUser = _userStore.Users.First(x => x.Username == user.Username);
             _userStore.Users.RemoveAt(_userStore.Users.IndexOf(currentUser));
             _userStore.Users.Add(user);
