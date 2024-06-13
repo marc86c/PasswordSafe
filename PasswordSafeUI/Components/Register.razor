@@ -1,36 +1,30 @@
 ﻿@page "/register"
 @rendermode InteractiveServer
 
-<div style="display: flex; flex-direction: column;  align-items: center; gap: 10px;">
-    <div>
-    </div>
-
+<div class="container">
     @if (!string.IsNullOrEmpty(ErrorMessage))
     {
-        <p style="color:red;">@ErrorMessage</p>
+        <p class="error-message">@ErrorMessage</p>
     }
     <h3>Register</h3>
 
-    <EditForm Model="@registerModel" OnValidSubmit="@( async () => await HandleRegister())" FormName="RegisterForm" style="display: flex; flex-direction: column;">
+    <EditForm Model="@registerModel" OnValidSubmit="@( async () => await HandleRegister())" FormName="RegisterForm" class="register-form">
         <DataAnnotationsValidator />
         <ValidationSummary />
-        <div>
-
-            <div>
-                <label>Username: </label>
-                <InputText id="username" @bind-Value="registerModel.Username" />
-            </div>
-            <div>
-                <label>Password: </label>
-                <InputText type="password" id="password" @bind-Value="registerModel.Password" />
-            </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <InputText id="username" @bind-Value="registerModel.Username" class="input-field" />
         </div>
-        
-        <div style="display: flex; justify-content: center">
-            <button type="submit">Register</button>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <InputText type="password" id="password" @bind-Value="registerModel.Password" class="input-field" />
+        </div>
+        <div class="button-container">
+            <button type="submit" class="submit-button">Register</button>
         </div>
     </EditForm>
-    <div style="display: inline-flex; justify-content: left; gap: 5px">
-        <p>Hast du bereits ein Konto?</p> <p @onclick="Login" style="text-decoration: underline;">Login</p>
+    <div class="login-prompt">
+        <p>Hast du bereits ein Konto?</p>
+        <p @onclick="Login" class="login-link">Login</p>
     </div>
 </div>

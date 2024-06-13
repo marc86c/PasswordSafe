@@ -444,19 +444,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marc\\.nuget\\packages\\": {}
+    "C:\\Users\\Michael\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\PasswordSafe.csproj",
+      "projectUniqueName": "C:\\Users\\Michael\\BBW\\Modul_183\\PasswordSafe\\PasswordSafe\\PasswordSafe.csproj",
       "projectName": "PasswordSafe",
-      "projectPath": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\PasswordSafe.csproj",
-      "packagesPath": "C:\\Users\\Marc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafe\\obj\\",
+      "projectPath": "C:\\Users\\Michael\\BBW\\Modul_183\\PasswordSafe\\PasswordSafe\\PasswordSafe.csproj",
+      "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Michael\\BBW\\Modul_183\\PasswordSafe\\PasswordSafe\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Marc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -464,14 +464,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\PasswordSafeCommon.csproj": {
-              "projectPath": "C:\\Users\\Marc\\Dropbox\\PC\\Documents\\Berufsschule\\3. Lehrjahr\\Modul Security\\PasswordSafe\\PasswordSafeCommon\\PasswordSafeCommon.csproj"
+            "C:\\Users\\Michael\\BBW\\Modul_183\\PasswordSafe\\PasswordSafeCommon\\PasswordSafeCommon.csproj": {
+              "projectPath": "C:\\Users\\Michael\\BBW\\Modul_183\\PasswordSafe\\PasswordSafeCommon\\PasswordSafeCommon.csproj"
             }
           }
         }
@@ -515,7 +516,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

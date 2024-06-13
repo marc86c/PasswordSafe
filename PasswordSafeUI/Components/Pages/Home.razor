@@ -4,18 +4,16 @@
 @inject UserState UserState
 @rendermode InteractiveServer
 
-<PageTitle>Home</PageTitle>
 
-<div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-        <h1>PasswordSafe</h1>
-        <div style="display: flex; flex-direction: column; width: 100%; gap: 10px;">
-            <button style="height: 50px;" @onclick="ToLogin">Login</button>
-            <button style="height: 50px;" @onclick="ToRegister">Registrieren</button>
-        </div>
+
+<PageTitle>PasswordSafe</PageTitle>
+<div class="container">
+    <h1>PasswordSafe</h1>
+    <div class="buttons">
+        <button @onclick="ToLogin">Login</button>
+        <button @onclick="ToRegister">Registrieren</button>
     </div>
 </div>
-
 
 @code {
     public void ToLogin()
