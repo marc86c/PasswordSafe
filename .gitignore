@@ -414,3 +414,7 @@ FodyWeavers.xsd
 /PasswordSafe/bin
 /PasswordSafeCommon/bin
 /PasswordSafeUI/bin
+
+/PasswordSafe/obj
+/PasswordSafeCommon/obj
+/PasswordSafeUI/obj
