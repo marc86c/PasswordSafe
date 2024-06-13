@@ -1,12 +1,21 @@
-Ein Passwortmanager als Web-App, welche den User erlaubt sich zu registrieren und einzuloggen. Auf der Web-App kann dieser User seine Passwörter eintragen und verwalten.
+# PasswordSafe
+Ein Passwortmanager als Web-App, welche den User erlaubt sich zu registrieren und einzuloggen. Auf der Web-App kann dieser User seine Passwörter eintragen und Sicher verwalten.
 
 # Reflexion
-
 Das Projekt ist uns eigentlich gut gelungen, das programmieren hat flüssig funktioniert. Es war aber recht schwierig, die Security-Risiken im Auge zu behalten. Wir denken aber, dass uns das trotzdem gelungen ist. Momentan haben wir eigentlich alle Funktionen eingebaut inkl. Login, das Styling haben wir noch fast nicht erledigt, dies wäre nun unser nächster Schritt. Uns geht es gut.
 
 ## Stand: 1306.2024:
 Das Styling und fehlende Sicherheitsfunktionen wurden eingebaut. Das .gitignore macht uns noch "Probleme", es ignoriert nicht alles was wir eingetragen haben. 
 Ansonsten ist und das Projekt gut gelungen. Wir haben fast ausschliesslich in der Schule daran gearbeitet und zeitlich war es auch kein Problem. Die Kommunikaton war gut, aber hätte auch besser sein können.
+
+Beim nächsten mal würden wir wahrscheinlich das .gitignore zu beginn einfügen und die Aufgaben gleich zu beginn schneller und effektiver aufteilen.
+
+# Technology
+Als Technology haben wir Blazor und Asp.net API benutzt.
+
+# Projektstruktur
+Unser Repo besteht aus 3 Projekten, PasswordSafeUI, dies ist unser Frontend. Das PasswordSafe ist unsere API + Datenbank. Als letztes haben wir noch das PasswordSafeCommon Projekt, hier handelt es sich um ein Projekt, in welchem Objekte sind, welche im UI sowie in der API gebrauch werden, mit diesem Vorgehen haben wir keine Abhängigkeiten von der API zum UI und umgekehrt.
+
 
 # Abläufe
 
