@@ -35,8 +35,9 @@ Projekt erweitert. Fehlende Funktionalität implementiert, Styling begonnen.
 
 ## Stand 13.06.2024:
 Das Styling und fehlende Sicherheitsfunktionen wurden eingebaut. Das .gitignore macht uns noch "Probleme", es ignoriert nicht alles was wir eingetragen haben. 
-Ansonsten ist und das Projekt gut gelungen. Wir haben fast ausschliesslich in der Schule daran gearbeitet und zeitlich war es auch kein Problem. Die Kommunikaton war gut, aber hätte auch besser sein können.
 
+## Reflexion
+Wir haben fast ausschliesslich in der Schule daran gearbeitet und zeitlich war es auch kein Problem. Die Kommunikaton war gut, aber hätte auch besser sein können.
 Beim nächsten mal würden wir wahrscheinlich das .gitignore zu beginn einfügen und die Aufgaben gleich zu beginn schneller und effektiver aufteilen.
 
 # Grundkonzept
@@ -83,13 +84,17 @@ Wenn man die Daten erstellt, werden diese zusammen mit dem SessionToken an die A
 Beim holen der Daten, werden nach validierung des SessionTokens die Passwörter entschlüsselt und zurück gegeben, diese werden zuerst mit "****" im UI angezeigt. Erst beim klicken auf "Öffnen" sieht an das plaintext Passwort. Man kann auch nur ein Passwort gleichzeitig in Plaintext anzeigen.
 
 ## Weitere Security-Funktionen
-XSS muss nicht implementiert werden denn:
+### XSS muss nicht implementiert werden denn:
 
 'By default, Razor HTML encodes all strings that it is asked to render. This mitigates against XSS attacks. You have to take steps to bypass this protection to render the string as raw HTML by casting to MarkupString in Blazor or using HTML.Raw() in Razor Pages/MVC. At that point, you should take responsibility for any sanitising that your application requires.'
 
 Quelle https://stackoverflow.com/questions/75236876/blazor-with-signalr-how-is-an-xss-or-other-attack-possible-when-storing-and-re
 
 Falls andere Frontend-Technologien benutzt werden, müsste man die Daten unbedingt nochmals validieren.
+
+
+### SQL-Injection
+Um SQL-Injection mussten wir uns keine Gedanken machen, da wir keine Datenbank haben, nur JSON-Files ;)
 
 ## Endpoints
 
