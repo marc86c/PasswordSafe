@@ -73,3 +73,25 @@ Beim holen der Daten, werden nach validierung des SessionTokens die Passwörter 
 XSS muss nicht implementiert werden denn:
 By default, Razor HTML encodes all strings that it is asked to render. This mitigates against XSS attacks. You have to take steps to bypass this protection to render the string as raw HTML by casting to MarkupString in Blazor or using HTML.Raw() in Razor Pages/MVC. At that point, you should take responsibility for any sanitising that your application requires.
 https://stackoverflow.com/questions/75236876/blazor-with-signalr-how-is-an-xss-or-other-attack-possible-when-storing-and-re
+
+# Endpoints
+
+## api/auth/register POST
+Dieser Endpoint ist für das Registieren zuständig.
+
+Erwartet einen Username und ein Passwort.
+Liefert einen Boolean.
+
+## api/auth/login POST
+Dieser Endpoint ist für das Login zuständig.
+
+Erwartet einen Username und ein Passwort.
+Liefert einen SessionToken.
+
+## api/User/User/Data PUT
+Kann einen User bearbeiten z.B. um einen Authentifizierungsatz hinzuzufügen.
+
+Erwartet einen User und einen SessionToken.
+
+## api/User/User/{Username}/Data
+Liefert die Daten des Users.
