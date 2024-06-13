@@ -38,7 +38,7 @@ Das Styling und fehlende Sicherheitsfunktionen wurden eingebaut. Das .gitignore 
 
 ## Reflexion
 Wir haben fast ausschliesslich in der Schule daran gearbeitet und zeitlich war es auch kein Problem. Die Kommunikaton war gut, aber hätte auch besser sein können.
-Beim nächsten mal würden wir wahrscheinlich das .gitignore zu beginn einfügen und die Aufgaben gleich zu beginn schneller und effektiver aufteilen.
+Beim nächsten mal würden wir wahrscheinlich das .gitignore zu beginn einfügen und die Aufgaben gleich zu beginn schneller und effektiver aufteilen. Am besten würden wir bei nächsten Projekt, eine Sprache, Umgebung usw benutzen, mit welcher alle Teammitglieder bereits vertraut sind, denn nun hat es viele Erklärungen gebraucht.
 
 # Grundkonzept
 
@@ -74,10 +74,10 @@ Bei der Registrierung wird zuerst die Komplexität des Passwortes überprüft:
  Danach wird eine Request an die API geschickt, das Passwort zusammen mit dem Salt gehashed und im JSON-File gespeichert.
 
 ### Login:
-Beim Login wird eine Request an die API gesendet, das Passwort zusammen mit dem Salt gehashed mit dem bereits vorhandenen gehashed Passwort verglichen. Falls dies nicht der Fall ist, returnt die API eine Fehlermeldung. Sonst sendet die API einen SessionToken zurück, welcher im UI temopär gespeichert wird (in dieser Session). Dieser Token wird bei jedem nächsten Request ans API mitgegeben und dort Validiert. Dies verhindert, dass User über die URL auf die Daten von anderen Usern gelangt.
+Beim Login wird eine Request an die API gesendet, das Passwort zusammen mit dem Salt gehashed mit dem bereits vorhandenen gehashed Passwort verglichen. Falls dies nicht der Fall ist, returnt die API eine Fehlermeldung. Sonst sendet die API einen SessionToken zurück, welcher im UI temopär gespeichert wird (in dieser Session). Dieser Token wird bei jedem nächsten Request ans API mitgegeben und dort Validiert. Dies verhindert, dass User über die URL auf die Daten von anderen Usern gelangt. Das heisst jegliche Seiten ausser Login und Register sind gelockt, bis der User eingeloggt ist. 
 
 ### Logout:
-Beim Logout wird der SessionToken im UI gelöscht.
+Beim Logout wird der SessionToken im UI gelöscht und somit werden jegliche Seiten ausser Register und Login "gelockt".
 
 ### Daten
 Wenn man die Daten erstellt, werden diese zusammen mit dem SessionToken an die API gesendet. Wenn der SessionToken gültig ist, wird der das Passwort verschlüsselt und gespeichert.
