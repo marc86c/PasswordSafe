@@ -1,7 +1,7 @@
 # PasswordSafe
 Ein Passwortmanager als Web-App, welche den User erlaubt sich zu registrieren und einzuloggen. Auf der Web-App kann dieser User seine Passwörter eintragen und Sicher verwalten.
 
-# Clonen und Starten des Projektes
+## Clonen und Starten des Projektes
 Als Umgebung empfehlen wir Visual Studio 2022.
 
 Nach dem das Repo gecloned wurde, muss man die PasswordSafe.sln öffnen. Im Visual Studio Rechtsklick auf das aller erste Item:
