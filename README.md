@@ -81,9 +81,13 @@ Beim Logout wird der SessionToken im UI gelöscht und somit werden jegliche Seit
 
 ### Daten
 Wenn man die Daten erstellt, werden diese zusammen mit dem SessionToken an die API gesendet. Wenn der SessionToken gültig ist, wird der das Passwort verschlüsselt und gespeichert.
-Beim holen der Daten, werden nach validierung des SessionTokens die Passwörter entschlüsselt und zurück gegeben, diese werden zuerst mit "****" im UI angezeigt. Erst beim klicken auf "Öffnen" sieht an das plaintext Passwort. Man kann auch nur ein Passwort gleichzeitig in Plaintext anzeigen.
+Beim holen der Daten, werden nach validierung des SessionTokens die Passwörter entschlüsselt und zurück gegeben. 
 
 ## Weitere Security-Funktionen
+
+### Anzeigen des Passwortes
+Um ungewollte Zuschauer nicht direkt alle Passwörter zu präsentieren, werden die Passwörter zuerst mit "****" im UI angezeigt. Erst beim klicken auf "Öffnen" sieht man das plaintext Passwort. Man kann auch nur ein Passwort gleichzeitig in Plaintext anzeigen, beim öffnen eines anderes Passwortes, wird das vorher geöffnete Passwort geschlossen.
+
 ### XSS muss nicht implementiert werden denn:
 
 'By default, Razor HTML encodes all strings that it is asked to render. This mitigates against XSS attacks. You have to take steps to bypass this protection to render the string as raw HTML by casting to MarkupString in Blazor or using HTML.Raw() in Razor Pages/MVC. At that point, you should take responsibility for any sanitising that your application requires.'
