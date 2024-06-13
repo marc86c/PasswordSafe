@@ -84,8 +84,10 @@ Beim holen der Daten, werden nach validierung des SessionTokens die Passwörter 
 
 ## Weitere Security-Funktionen
 XSS muss nicht implementiert werden denn:
-By default, Razor HTML encodes all strings that it is asked to render. This mitigates against XSS attacks. You have to take steps to bypass this protection to render the string as raw HTML by casting to MarkupString in Blazor or using HTML.Raw() in Razor Pages/MVC. At that point, you should take responsibility for any sanitising that your application requires.
-https://stackoverflow.com/questions/75236876/blazor-with-signalr-how-is-an-xss-or-other-attack-possible-when-storing-and-re
+
+'By default, Razor HTML encodes all strings that it is asked to render. This mitigates against XSS attacks. You have to take steps to bypass this protection to render the string as raw HTML by casting to MarkupString in Blazor or using HTML.Raw() in Razor Pages/MVC. At that point, you should take responsibility for any sanitising that your application requires.'
+
+Quelle https://stackoverflow.com/questions/75236876/blazor-with-signalr-how-is-an-xss-or-other-attack-possible-when-storing-and-re
 
 Falls andere Frontend-Technologien benutzt werden, müsste man die Daten unbedingt nochmals validieren.
 
