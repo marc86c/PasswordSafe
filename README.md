@@ -115,9 +115,14 @@ Erwartet einen Username und ein Passwort.
 Liefert einen SessionToken.
 
 ### api/User/User/Data PUT
-Kann einen User bearbeiten z.B. um einen Authentifizierungsatz hinzuzufügen.
+Anhand der Parameter wird überprüft, ob der User berechtigt ist, die Daten zu updaten.
+Kann einen User bearbeiten z.B. um einen Authentifizierungs-Datensatz hinzuzufügen.
 
 Erwartet einen User und einen SessionToken.
+Liefert die User Daten, ähnlich wie beim nächsten Endpoint.
 
-### api/User/User/{Username}/Data
+### api/User/User/{Username}/Data GET
+Anhand der Parameter wird überprüft, ob der User berechtigt ist, die Daten zu holen.
+
+Erwartet den Username und den Sessionkey.
 Liefert die Daten des Users.
