@@ -1,6 +1,26 @@
 # PasswordSafe
 Ein Passwortmanager als Web-App, welche den User erlaubt sich zu registrieren und einzuloggen. Auf der Web-App kann dieser User seine Passwörter eintragen und Sicher verwalten.
 
+# Clonen und Starten des Projektes
+Als Umgebung empfehlen wir Visual Studio 2022.
+
+Nach dem das Repo gecloned wurde, muss man die PasswordSafe.sln öffnen. Im Visual Studio Rechtsklick auf das aller erste Item:
+
+![image](https://github.com/marc86c/PasswordSafe/assets/108449981/8380e684-acba-4e84-bc2f-522dcd2165ec)
+
+Dann auf Properties:
+
+![image](https://github.com/marc86c/PasswordSafe/assets/108449981/e4209b96-a2b1-4dbb-834a-49323e597f39)
+
+Und folgende Einstellungen übernehmen:
+
+![image](https://github.com/marc86c/PasswordSafe/assets/108449981/33a872ee-1f3c-4f23-aeb1-f38615d564ae)
+
+Fenster wieder schliessen und Startbutton drücken:
+
+![image](https://github.com/marc86c/PasswordSafe/assets/108449981/54608220-1380-40dc-9120-513a0bf3a70b)
+
+
 # Reflexion
 Das Projekt ist uns eigentlich gut gelungen, das programmieren hat flüssig funktioniert. Es war aber recht schwierig, die Security-Risiken im Auge zu behalten. Wir denken aber, dass uns das trotzdem gelungen ist. Momentan haben wir eigentlich alle Funktionen eingebaut inkl. Login, das Styling haben wir noch fast nicht erledigt, dies wäre nun unser nächster Schritt. Uns geht es gut.
 
