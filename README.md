@@ -89,7 +89,7 @@ Falls andere Frontend-Technologien benutzt werden, müsste man die Daten unbedin
 
 ## Endpoints
 
-##3 api/auth/register POST
+### api/auth/register POST
 Dieser Endpoint ist für das Registieren zuständig.
 
 Erwartet einen Username und ein Passwort.
