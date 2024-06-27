@@ -1,4 +1,4 @@
-# PasswordSafe
+# PasswordSafe M323
 Ein Passwortmanager als Web-App, welche den User erlaubt sich zu registrieren und einzuloggen. Auf der Web-App kann dieser User seine Passwörter eintragen und Sicher verwalten.
 
 ## Clonen und Starten des Projektes
@@ -126,3 +126,13 @@ Anhand der Parameter wird überprüft, ob der User berechtigt ist, die Daten zu 
 
 Erwartet den Username und den Sessionkey.
 Liefert die Daten des Users.
+
+# PasswordSafe M183
+
+## Funktionale Programmierung
+
+public IQueryable<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
+    user.AuthenticationDatas.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).AsQueryable(): 
+    user.AuthenticationDatas.AsQueryable();
+
+Bei diesem Code filtern wir mit Hilfe funktionaler Programmierung nach den Authenifizierungsdaten, bei welches entweder der Provider oder Username den gesuchte Text enthalten
