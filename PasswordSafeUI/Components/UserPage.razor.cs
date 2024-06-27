@@ -20,8 +20,7 @@ namespace PasswordSafeUI.Components
         public string Username { get; set; }
 
         public List<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
-            user.AuthenticationDatas.Where(x => x.Username.Contains(filterCriteria)).ToList() 
-                .Concat(user.AuthenticationDatas.Where(x => x.Provider.Contains(filterCriteria))).ToList() : 
+            user.AuthenticationDatas.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).ToList(): 
             user.AuthenticationDatas;
 
         public User user { get; set; }
