@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.FluentUI.AspNetCore.Components;
 using PasswordSafeCommon.Model;
 using PasswordSafeUI.Components.Common;
 using PasswordSafeUI.Service;
@@ -29,6 +30,7 @@ namespace PasswordSafeUI.Components
         public AuthenticationData newData;
         public int? openPasswordIndex = null;
         public string filterCriteria;
+        public PaginationState State = new PaginationState() { ItemsPerPage = 5 };
 
         protected override async Task OnInitializedAsync()
         {

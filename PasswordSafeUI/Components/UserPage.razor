@@ -28,7 +28,7 @@
                     <FluentSearch Placeholder="Suchen" Value="@filterCriteria" ValueChanged="@((value) => { filterCriteria = value; StateHasChanged(); })" Style=""></FluentSearch>
                 </div>
             </div>
-            <FluentDataGrid TGridItem="AuthenticationData" Items="AuthenticationDatas">
+            <FluentDataGrid TGridItem="AuthenticationData" Items="AuthenticationDatas" Pagination="State">
                 <PropertyColumn Property="@(x => x.Provider)" Title="Provider" Sortable="true"></PropertyColumn>
                 <PropertyColumn Property="@(x => x.Username)" Title="Username" Sortable="true"></PropertyColumn>
                 <TemplateColumn Context="context" Title="Password">
@@ -55,6 +55,7 @@
                     <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(context)))" class="action-button">X</button>
                 </TemplateColumn>
             </FluentDataGrid>
+            <FluentPaginator State="State"></FluentPaginator>
         </div>
     }
     else
