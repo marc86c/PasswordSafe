@@ -1,4 +1,5 @@
 ﻿@page "/home/{Username}"
+@using PasswordSafeCommon.Model
 @rendermode InteractiveServer
 
 <div class="container">
@@ -18,46 +19,42 @@
             <button @onclick="@Add" class="action-button">Add +</button>
             <button @onclick="@Logout" class="action-button">Logout</button>
         </div>
-        <div class="data-section">
-            <h4>Daten</h4>
-            <div class="search-box">
-                <FluentSearch Placeholder="Suchen" Value="@filterCriteria" ValueChanged="@((value) => { filterCriteria = value; StateHasChanged(); })"></FluentSearch>
-            </div>
-            @foreach (var data in AuthenticationDatas)
-            {
-                <div class="data-item">
-                    <div class="data-field">
-                        <h5>Provider</h5>
-                        <input readonly @bind-value="@data.Provider" class="input-field"></input>
-                    </div>
-                    <div class="data-field">
-                        <h5>Username</h5>
-                        <input readonly @bind-value="@data.Username" class="input-field"></input>
-                    </div>
-                    <div class="data-field">
-                        <h5>Password</h5>
-                        @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(data))
-                        {
-                            <input readonly @bind-value="@data.Password" class="input-field"></input>
-                        }
-                        else
-                        {
-                            <input readonly placeholder="*****" class="input-field" />
-                        }
-                    </div>
-                    <div class="delete-button">
-                        @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(data))
-                        {
-                            <button @onclick="@( () => OpenPassword(null))" class="toggle-button">Schließen</button>
-                        }
-                        else
-                        {
-                            <button @onclick="@(() => OpenPassword(user.AuthenticationDatas.IndexOf(data)))" class="toggle-button">Öffnen</button>
-                        }
-                        <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(data)))" class="action-button">X</button>
-                    </div>
+        <div>
+            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center">
+                <div>
+                    <h4>Daten</h4>
                 </div>
-            }
+                <div class="search-box" >
+                    <FluentSearch Placeholder="Suchen" Value="@filterCriteria" ValueChanged="@((value) => { filterCriteria = value; StateHasChanged(); })" Style=""></FluentSearch>
+                </div>
+            </div>
+            <FluentDataGrid TGridItem="AuthenticationData" Items="AuthenticationDatas">
+                <PropertyColumn Property="@(x => x.Provider)" Title="Provider" Sortable="true"></PropertyColumn>
+                <PropertyColumn Property="@(x => x.Username)" Title="Username" Sortable="true"></PropertyColumn>
+                <TemplateColumn Context="context" Title="Password">
+                    @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(context))
+                    {
+                        <input readonly @bind-value="@context.Password" class="input-field"></input>
+                    }
+                    else
+                    {
+                        <input readonly placeholder="*****" class="input-field" />
+                    }
+                </TemplateColumn>
+                <TemplateColumn Context="context" Title="Password anzeigen">
+                    @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(context))
+                    {
+                        <button @onclick="@( () => OpenPassword(null))" class="toggle-button">Schließen</button>
+                    }
+                    else
+                    {
+                        <button @onclick="@(() => OpenPassword(user.AuthenticationDatas.IndexOf(context)))" class="toggle-button">Öffnen</button>
+                    }
+                </TemplateColumn>
+                <TemplateColumn Title="Delete">
+                    <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(context)))" class="action-button">X</button>
+                </TemplateColumn>
+            </FluentDataGrid>
         </div>
     }
     else

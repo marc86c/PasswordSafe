@@ -2,6 +2,7 @@
 using PasswordSafeCommon.Model;
 using PasswordSafeUI.Components.Common;
 using PasswordSafeUI.Service;
+using System.Linq;
 
 namespace PasswordSafeUI.Components
 {
@@ -19,9 +20,9 @@ namespace PasswordSafeUI.Components
         [Parameter]
         public string Username { get; set; }
 
-        public List<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
-            user.AuthenticationDatas.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).ToList(): 
-            user.AuthenticationDatas;
+        public IQueryable<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
+            user.AuthenticationDatas.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).AsQueryable(): 
+            user.AuthenticationDatas.AsQueryable();
 
         public User user { get; set; }
         public bool isAdding = false;
