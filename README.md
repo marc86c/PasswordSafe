@@ -129,6 +129,16 @@ Liefert die Daten des Users.
 
 # Projekt M183
 
+Dieses Projekt basiert auf dem im M323 erstellte Projekt "PasswordSafe". Hier wurde der PasswordSafe mit weitern nützlichen Features ausgestatten:
+1. Kategoriesierung der Daten
+   Somit kann man nach z.B. SecurityDaten für die Accounts von sozialen Medien filtern, ohne jeden einzelnen Eintrag zu suchen.
+2. Suche
+  Mit der Hilfe der Suche kann man Eintrage nach dem Namen des Providers oder des Usernames suchen, somit muss man nicht durch alle Seiten gehen, um den richtigen Eintrag zu finden.
+3. Sortierung
+   Mit Hilfe der Sortierung kann man sowohl die Eintrage nach Provider, aber auch dem Username Sortieren.
+4. Pagination
+   Durch die Pagination bleibt die Seite übersichtlich, man hat nun keine endlichlos lange Liste mehr, sondern immer schön 10 Einträge pro Seite.
+
 ## Suche
 Für die Suche haben wir ein FluentSearch Komponent benutzt, dieser löst nach Eingabe (mit Debounce) diese filterung aus:
 
