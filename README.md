@@ -177,3 +177,22 @@ var pagedAuthenticationDatas = user.AuthenticationDatas.Skip(ItemsPerPage * (cur
 
 Bei diesem Code wird die Methode .Skip() benutzt, die Methode erwartet eine Zahl als Parameter. Wie der Methodenname schon aussagent, "Skipped" es die ersten x Einträge der List.
 Als nächstes wird die Methode .Take() benutzt, diese erwartet ebenfalls eine Zahl als Parameter. Wie auch der Methodenname aussagt, nimmt man die nächsten x Einträge der List. In unserem Code währe das Eintrag 6-10; 
+
+## Kategorien
+Für die Kategorien haben wir ein enum definiert:
+
+```
+public enum AuthenticationDataType
+{
+   Private = 1,
+   School = 2,
+   Work = 3,
+   Finances = 4,
+   SocialMedia = 5,
+   Health = 6,
+   Entertainment = 7,
+   Other = 8
+}
+```
+
+Hier haben wir uns verschiedene Kategorien überlegt, welche der User auswählen kann, um seine Daten zu kategorisieren.
