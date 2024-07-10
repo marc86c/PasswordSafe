@@ -129,10 +129,51 @@ Liefert die Daten des Users.
 
 # PasswordSafe M183
 
-## Funktionale Programmierung
+## Suche
+Für die Suche haben wir ein FluentSearch Komponent benutzt, dieser löst nach Eingabe (mit Debounce) diese filterung aus:
 
+```
 public IQueryable<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
     user.AuthenticationDatas.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).AsQueryable(): 
     user.AuthenticationDatas.AsQueryable();
+```
 
-Bei diesem Code filtern wir mit Hilfe funktionaler Programmierung nach den Authenifizierungsdaten, bei welches entweder der Provider oder Username den gesuchte Text enthalten
+Bei diesem Code filtern wir mit Hilfe von Linq-Queries (.Where()) nach den Authenifizierungsdaten, welche entweder den gesuchten Text im Username oder im Provider enthält.
+
+## FluentDataGrid
+Für die Sortierung und die Pagination haben wir das FluentDataGrid und den FluentPaginator benutzt. Diese zwei Komponenten sind in der Library (NuGet) "FluentUI" verfügbar. Durch das Einsetzen dieser Komponenten, wird das Filtern und die Pagination sehr vereinfacht und ist daher eine sehr gute Möglichkeit, an eigener Logik zu sparen.
+
+So sieht unser Code aus:
+```
+<Code von FLuentDataGrid einfügen>
+```
+
+Dank diesem DataGrid mussten wir für die Funktionen keine eigene Funktionale Programmierung anwenden. Jedoch beschreiben wir hier den Code, welcher vermutlich dahinter steckt:
+Sortierung:
+Bei der Sortierung wird wahrschneinlich das OrderBy benutzt, z.B:
+```
+//Sortieren nach dem Username
+var orderedAuthenticationDatas = user.AuthenticationDatas.OrderBy(x => x.Username);
+```
+Hier geben wir das Property mit, nach welchem gefiltert wird.
+
+Bei unserer App kann man auch nach einem weiteren Property filtern:
+```
+//Sortieren nach dem Provider
+var orderedAuthenticationDatas = user.AuthenticationDatas.OrderBy(x => x.Provider);
+```
+
+Für die Pagination haben wir die FluentPaginator Komponente benutzt. Bei diesem Komponenten steck wahrschneinlich etwas ähnliches wie folgender Code dahinter:
+ ```
+//Beispiel:
+//5 Einträge pro Seite
+//Gerade befinden wir uns auf Seite 2
+
+const ItemsPerPage = 5;
+var currentPage = 2;
+
+var pagedAuthenticationDatas = user.AuthenticationDatas.Skip(ItemsPerPage * (currentPage-1)).Take(ItemsPerPage);
+```
+
+Bei diesem Code wird die Methode .Skip() benutzt, die Methode erwartet eine Zahl als Parameter. Wie der Methodenname schon aussagent, "Skipped" es die ersten x Einträge der List.
+Als nächstes wird die Methode .Take() benutzt, diese erwartet ebenfalls eine Zahl als Parameter. Wie auch der Methodenname aussagt, nimmt man die nächsten x Einträge der List. In unserem Code währe das Eintrag 6-10; 
