@@ -139,6 +139,10 @@ Dieses Projekt basiert auf dem im M183 erstellte Projekt "PasswordSafe". Hier wu
 * Pagination
    - Durch die Pagination bleibt die Seite übersichtlich, man hat nun keine endlichlos lange Liste mehr, sondern immer schön 10 Einträge pro Seite.
 
+## Unterstützung von funktionaler Programmierung in C#
+
+Eigentlich ist C# keine funtionale Programmiersprache, sondern eine objekt orientierte. Trotzdem unterstützt C# die funktionale Programmierung durch LINQ (Language Integrated Query) oder Lambda-Funktionen. Dies wird in neueren Versionen immer besser.
+
 ## Suche
 Für die Suche haben wir ein FluentSearch Komponent benutzt, dieser löst nach Eingabe (mit Debounce) diese filterung aus:
 
@@ -249,3 +253,9 @@ public IQueryable<AuthenticationData> GetFilteredAuthenticationDatas()
 }
 
 ```
+
+
+## App
+So sieht unsere App nach den funktionalen Anpassungen aus:
+
+![image](https://github.com/marc86c/PasswordSafe/assets/108449981/d3c75c25-5126-4785-8325-0b4b550f36d2)
