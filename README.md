@@ -154,8 +154,37 @@ Bei diesem Code filtern wir mit Hilfe von Linq-Queries (.Where()) nach den Authe
 Für die Sortierung und die Pagination haben wir das FluentDataGrid und den FluentPaginator benutzt. Diese zwei Komponenten sind in der Library (NuGet) "FluentUI" verfügbar. Durch das Einsetzen dieser Komponenten, wird das Filtern und die Pagination sehr vereinfacht und ist daher eine sehr gute Möglichkeit, an eigener Logik zu sparen.
 
 So sieht unser Code aus:
-```
-<Code von FLuentDataGrid einfügen>
+```<FluentDataGrid TGridItem="AuthenticationData" Items="AuthenticationDatas" Pagination="State" Style="overflow: auto">
+    <PropertyColumn Property="@(x => x.Provider)" Title="Provider" Sortable="true"></PropertyColumn>
+    <PropertyColumn Property="@(x => x.Username)" Title="Username" Sortable="true"></PropertyColumn>
+    <TemplateColumn Title="Type" Context="context">
+        <FluentCombobox Style="overflow: auto; max-width: 100%" TOption="AuthenticationDataType" Items="Types" @bind-SelectedOption="context.Type" Placeholder="type"></FluentCombobox>
+    </TemplateColumn>
+    <TemplateColumn Context="context" Title="Password">
+        @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(context))
+        {
+            <input readonly @bind-value="@context.Password" class="input-field"></input>
+        }
+        else
+        {
+            <input readonly placeholder="*****" class="input-field" />
+        }
+    </TemplateColumn>
+    <TemplateColumn Context="context" Title="Password anzeigen">
+        @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(context))
+        {
+            <button @onclick="@( () => OpenPassword(null))" class="toggle-button">Schließen</button>
+        }
+        else
+        {
+            <button @onclick="@(() => OpenPassword(user.AuthenticationDatas.IndexOf(context)))" class="toggle-button">Öffnen</button>
+        }
+    </TemplateColumn>
+    <TemplateColumn Title="Delete">
+        <button @onclick="@(async () => await DeleteData(user.AuthenticationDatas.IndexOf(context)))" class="action-button">X</button>
+    </TemplateColumn>
+</FluentDataGrid>
+<FluentPaginator State="State"></FluentPaginator>
 ```
 
 Dank diesem DataGrid mussten wir für die Funktionen keine eigene Funktionale Programmierung anwenden. Jedoch beschreiben wir hier den Code, welcher vermutlich dahinter steckt:
