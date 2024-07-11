@@ -261,4 +261,5 @@ public IQueryable<AuthenticationData> GetFilteredAuthenticationDatas()
 ## App
 So sieht unsere App nach den funktionalen Anpassungen aus:
 
-![image](https://github.com/marc86c/PasswordSafe/assets/108449981/d3c75c25-5126-4785-8325-0b4b550f36d2)
+![image](https://github.com/marc86c/PasswordSafe/assets/108449981/a44f6e0e-1e09-4efd-8d0c-13900dea19d0)
+
