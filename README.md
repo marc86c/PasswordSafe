@@ -1,6 +1,9 @@
 # PasswordSafe
 Ein Passwortmanager als Web-App, welche den User erlaubt sich zu registrieren und einzuloggen. Auf der Web-App kann dieser User seine Passwörter eintragen und Sicher verwalten.
 
+# Disclaimer
+Unser Team hat mehrheitlich zusammen an einem Laptop gearbeitet, daher sind die Commits zu 99% nur von einem Account aus getätigt worden.
+
 ## Clonen und Starten des Projektes
 Als Umgebung empfehlen wir Visual Studio 2022.
 
