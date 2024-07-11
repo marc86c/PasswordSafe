@@ -235,3 +235,17 @@ public enum AuthenticationDataType
 ```
 
 Hier haben wir uns verschiedene Kategorien überlegt, welche der User auswählen kann, um seine Daten zu kategorisieren.
+
+Für die Kategorisierung haben wir uns Code angepasst, welcher die Einträge filtert:
+
+```
+public IQueryable<AuthenticationData> GetFilteredAuthenticationDatas()
+{
+   var categoriesed = filterType != null && filterType != AuthenticationDataType.None ? user.AuthenticationDatas.Where(x => x.Type == filterType) : user.AuthenticationDatas;
+
+   return !string.IsNullOrEmpty(filterCriteria) ?
+   categoriesed.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).AsQueryable() :
+   categoriesed.AsQueryable();
+}
+
+```
