@@ -20,7 +20,7 @@ Fenster wieder schliessen und Startbutton drücken:
 
 ![image](https://github.com/marc86c/PasswordSafe/assets/108449981/54608220-1380-40dc-9120-513a0bf3a70b)
 
-# Projekt M323
+# Projekt M183
 ## Reflexion und Zwischenabgaben
 
 ### Stand 16.05.2024
@@ -127,9 +127,9 @@ Anhand der Parameter wird überprüft, ob der User berechtigt ist, die Daten zu 
 Erwartet den Username und den Sessionkey.
 Liefert die Daten des Users.
 
-# Projekt M183
+# Projekt M323
 
-Dieses Projekt basiert auf dem im M323 erstellte Projekt "PasswordSafe". Hier wurde der PasswordSafe mit weitern nützlichen Features ausgestatten:
+Dieses Projekt basiert auf dem im M183 erstellte Projekt "PasswordSafe". Hier wurde der PasswordSafe mit weitern nützlichen Features ausgestatten:
 * Kategoriesierung der Daten
    - Somit kann man nach z.B. SecurityDaten für die Accounts von sozialen Medien filtern, ohne jeden einzelnen Eintrag zu suchen.
 * Suche
