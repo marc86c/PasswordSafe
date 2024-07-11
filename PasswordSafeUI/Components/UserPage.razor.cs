@@ -21,15 +21,25 @@ namespace PasswordSafeUI.Components
         [Parameter]
         public string Username { get; set; }
 
-        public IQueryable<AuthenticationData> AuthenticationDatas => !string.IsNullOrEmpty(filterCriteria) ? 
-            user.AuthenticationDatas.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).AsQueryable(): 
-            user.AuthenticationDatas.AsQueryable();
+        public IQueryable<AuthenticationData> AuthenticationDatas => GetFilteredAuthenticationDatas();
+
+        public IQueryable<AuthenticationData> GetFilteredAuthenticationDatas()
+        {
+            var categoriesed = filterType != null && filterType != AuthenticationDataType.None ? user.AuthenticationDatas.Where(x => x.Type == filterType) : user.AuthenticationDatas;
+
+            return !string.IsNullOrEmpty(filterCriteria) ?
+            categoriesed.Where(x => x.Username.ToLower().Contains(filterCriteria) || x.Provider.ToLower().Contains(filterCriteria)).AsQueryable() :
+            categoriesed.AsQueryable();
+        }
+
+        public List<AuthenticationDataType> Types { get; set; }
 
         public User user { get; set; }
         public bool isAdding = false;
-        public AuthenticationData newData;
+        public AuthenticationData newData = new AuthenticationData();
         public int? openPasswordIndex = null;
         public string filterCriteria;
+        public AuthenticationDataType filterType = 0;
         public PaginationState State = new PaginationState() { ItemsPerPage = 5 };
 
         protected override async Task OnInitializedAsync()
@@ -41,6 +51,7 @@ namespace PasswordSafeUI.Components
                     NavigationManager.NavigateTo("/Login");
                 }
                 user = UserState.CurrentUser;
+                Types = Enum.GetValues(typeof(AuthenticationDataType)).Cast<AuthenticationDataType>().ToList();
             }
             catch (Exception ex) 
             {
@@ -60,7 +71,7 @@ namespace PasswordSafeUI.Components
 
             user.AuthenticationDatas.Add(newData);
             isAdding = false;
-            newData = null;
+            newData = new AuthenticationData();
 
             StateHasChanged();
         }

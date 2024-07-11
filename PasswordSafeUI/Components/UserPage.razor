@@ -6,12 +6,13 @@
     @if (user != null)
     {
         <h1>Guten Tag @user.Username</h1>
-        @if (newData != null)
+        @if (isAdding)
         {
             <EditForm Model="@newData" OnValidSubmit="@(async () => await Save())" FormName="NewDataForm" class="form">
                 <input placeholder="Provider" @bind-value="newData.Provider" class="input-field" />
                 <input placeholder="Username" @bind-value="newData.Username" class="input-field" />
                 <input placeholder="Password" type="password" @bind-value="newData.Password" class="input-field" />
+                <FluentCombobox TOption="AuthenticationDataType" Items="Types" @bind-SelectedOption="newData.Type" Class="input-field" Placeholder="type"></FluentCombobox>
                 <button type="submit" class="submit-button">Speichern</button>
             </EditForm>
         }
@@ -26,11 +27,15 @@
                 </div>
                 <div class="search-box" >
                     <FluentSearch Placeholder="Suchen" Value="@filterCriteria" ValueChanged="@((value) => { filterCriteria = value; StateHasChanged(); })" Style=""></FluentSearch>
+                    <FluentCombobox TOption="AuthenticationDataType" Items="Types" SelectedOption="filterType" SelectedOptionChanged="(value) => { filterType = value; StateHasChanged(); }" Class="input-field" Placeholder="type"></FluentCombobox>
                 </div>
             </div>
-            <FluentDataGrid TGridItem="AuthenticationData" Items="AuthenticationDatas" Pagination="State">
+            <FluentDataGrid TGridItem="AuthenticationData" Items="AuthenticationDatas" Pagination="State" Style="overflow: auto">
                 <PropertyColumn Property="@(x => x.Provider)" Title="Provider" Sortable="true"></PropertyColumn>
                 <PropertyColumn Property="@(x => x.Username)" Title="Username" Sortable="true"></PropertyColumn>
+                <TemplateColumn Title="Type" Context="context" Style="overflow: visible; max-width: 100%">
+                    <FluentCombobox TOption="AuthenticationDataType" Items="Types" @bind-SelectedOption="context.Type" Placeholder="type"></FluentCombobox>
+                </TemplateColumn>
                 <TemplateColumn Context="context" Title="Password">
                     @if (openPasswordIndex.HasValue && openPasswordIndex.Value == user.AuthenticationDatas.IndexOf(context))
                     {
